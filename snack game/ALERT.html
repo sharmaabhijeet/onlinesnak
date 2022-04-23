@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background-color: gray;
+        }
+
+        #b1{
+            border: solid 2px black;
+            border-radius: 10px;
+            background-color: aqua;
+
+        }
+        #b2{
+            border: solid 2px black;
+            border-radius: 10px;
+            background-color: aqua;
+
+        }
+        span{
+            color: rgb(163, 173, 20);
+        }
+    </style>
+</head>
+<body>
+    
+   <span > First Number: <input type="text" value="" id="b1" placeholder="enter number"></span><br><br>
+   <span>Second Number:<input type="text" value="" id="b2" placeholder="enter number"> </span>
+   <br><br>
+    <input type="button" value="sum" id="btnn1" onclick="btn1();">
+    <input type="button" value="sub" id="bttn2" onclick="btn2();">
+    <input type="button" value="multy" id="bttn2" onclick="btn3();">
+    <input type="button" value="div" id="bttn2" onclick="btn4();">
+    <br><br>
+    <input type="text" value="" id="b3" placeholder="Ans">
+    <p id="demo"></p>
+  <span> Number <input type="text" value="" id="b4" placeholder="enter number"></span>
+  <br>
+ <input type="button" value="click" id="bbtt3" onclick="loop();">
+ <br>
+ <p id="b5">
+
+ </p>
+</body>
+<script>
+        
+    function btn1()
+    {
+        var a=parseInt(document.getElementById("b1").value);
+        var b=parseInt(document.getElementById("b2").value); 
+        var c;
+        c=a+b;
+        alert(c);
+        document.getElementById("b3").value=c;
+        
+    }
+    function btn2()
+    {
+        var a=parseInt(document.getElementById("b1").value);
+        var b=parseInt(document.getElementById("b2").value);
+        var c;
+        c=a-b;
+        alert(c);
+        document.getElementById("b3").value=c;
+        
+    }
+    function btn3()
+    {
+        var a=parseInt(document.getElementById("b1").value);
+        var b=parseInt(document.getElementById("b2").value);
+        var c;
+        c=a*b;
+        alert(c);
+        document.getElementById("b3").value=c;
+        
+    }
+    function btn4()
+    {
+        var a=parseInt(document.getElementById("b1").value);
+        var b=parseInt(document.getElementById("b2").value);
+        var c;
+        c=a/b;
+        alert(c);
+        document.getElementById("b3").value=c;
+        
+        
+    }
+
+    document.getElementById("demo").innerHTML="Abhijeet";
+    function loop()
+    { document.getElementById("b5").innerHTML="";
+        var a=parseInt(document.getElementById("b4").value);
+        var num='';
+        for( var i=1;i<=a;i++)
+        {
+            num=num+i;
+            
+        }
+        document.getElementById("b5").innerHTML=num+"<br>";
+    }
+</script>
+</html>
